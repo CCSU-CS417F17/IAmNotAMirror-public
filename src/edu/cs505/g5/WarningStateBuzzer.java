@@ -11,7 +11,7 @@ package edu.ccsu.cs505.g5;
 public class WarningStateBuzzer extends RasberriPiState {
 
 /**
- * To set the state of the RasberryPi to buzzer state, an object of class ObserverBuzzer is used
+ * To set the state of the RasberryPi to buzzer state, an object of class ObserverBuzzer is created
  */	
   public ObserverBuzzer observerBuzzer;
 
