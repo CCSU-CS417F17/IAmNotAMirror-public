@@ -4,7 +4,7 @@ package MagicMirror2;
  * This class shows different states of RasberriPi
  * @author CS505-Group5 
  */
-public class RasberriPiState {
+public class RasberryPiState {
 
 	/**
 	 * This method is for auto shutdown of the RaspberryPi
