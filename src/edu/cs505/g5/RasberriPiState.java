@@ -1,7 +1,7 @@
 package MagicMirror2;
 
 /**
- * This class shows various states for RasberriPi
+ * This class shows different states of RasberriPi
  * @author CS505-Group5 
  */
 public class RasberriPiState {
