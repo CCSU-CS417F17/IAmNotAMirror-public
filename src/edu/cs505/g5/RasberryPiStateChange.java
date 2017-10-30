@@ -6,7 +6,7 @@
 package edu.ccsu.cs505.g5;
 /**
  *
- * @author madhavimalarouth,vanya,Anil Kumar,Hiral Depani, Yao Wei
+ * @author CS505-Group5
  */
 /**
  * Interface class that has the following method.
