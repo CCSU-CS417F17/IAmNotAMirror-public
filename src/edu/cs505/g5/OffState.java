@@ -6,7 +6,7 @@ import java.util.Vector;
  * This class extends RaspberriPiState
  * @author CS505-Group5 
  */
-public class OffState extends RasberriPiState {
+public class OffState extends RasberryPiState {
 
     /**
      * This observer sends a notification (to the user) that RaspberryPi is going to switch off
