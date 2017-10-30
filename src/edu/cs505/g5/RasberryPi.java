@@ -1,12 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package edu.ccsu.cs505.g5;
 /**
  *
- * @author madhavimalarouth,vanya,Anil Kumar,Hiral Depani, Yao Wei
+ * @author CS505-Group5
  */
 import java.util.Vector;
 
