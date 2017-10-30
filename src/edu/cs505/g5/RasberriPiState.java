@@ -8,7 +8,7 @@ public class RasberriPiState {
 		
 	}
 
-	public void newOperation() {
+	public void warningState() {
 		
 	}
 
