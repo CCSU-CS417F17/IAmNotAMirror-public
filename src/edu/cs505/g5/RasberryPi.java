@@ -17,7 +17,7 @@ public class RasberryPi implements RasberryPiStateChange {
  */
   public SubjectDHTSensor dhtsensor;
   /**
-   * Defining the signature of the class
+   * Defining the signature of the method
    */
   public void setRasberryPiState() {
   }
