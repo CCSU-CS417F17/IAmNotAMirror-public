@@ -1,1 +1,2 @@
 # IAmNotAMirror-public
+Straight from the magical fairy tale of snow white and 7 dwarfs we are introducing a mirror that will tell the owner everything that they want to know. Our mirror is designed to update the user about room temperature, give BMI, and let user set alarm. This friendly mirror can take voice commands and can detect the presence of the user through motion sensors. The mirror is part of an optimistic vision of the future that imagines a world where screens and data are everywhere, ready to feed with whatever information needed at a moment's notice.
