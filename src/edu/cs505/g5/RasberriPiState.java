@@ -1,14 +1,22 @@
-package edu.ccsu.cs505.g5;
+package MagicMirror2;
 
-public class RasberriPiState {
+/**
+ * This class shows different states of RasberriPi
+ * @author CS505-Group5 
+ */
+public class RasberryPiState {
 
-	
-
-	public void autoSgutDown() {
+	/**
+	 * This method is for auto shutdown of the RaspberryPi
+	 */
+	public void autoShutDown() {
 		
 	}
 
-	public void newOperation() {
+	/**
+	 * This method is for sending the warning
+	 */
+	public void warningState() {
 		
 	}
 

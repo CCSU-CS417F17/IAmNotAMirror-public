@@ -1,17 +1,20 @@
 package edu.ccsu.cs505.g5;
 
-
-/*
+/**
+ * This class also implements the interface ObserverDHTSensor
+ * Observer State is an attribute
+ * @author CS505-Group5 
  */
 public class ObserverNotification implements ObserverDHTSensor {
 
 	public int observerState;
 
-
-	@Override
+	/**
+	 * @param subjectDHTSensor notifies on a regular interval of time
+	 */
+	
 	public void update(SubjectDHTSensor subjectDHTSensor) {
 		
-		// TODO Auto-generated method stub
 		
 	}
 
