@@ -1,4 +1,4 @@
-package edu.ccsu.cs505.g5;
+package edu.ccsu.cs505.state;
 
 /**
  *
@@ -12,8 +12,8 @@ public class WarningStateBuzzer extends RasberryPiState {
 
 /**
  * To set the state of the RasberryPi to buzzer state, an object of class ObserverBuzzer is created
- */	
-  public ObserverBuzzer observerBuzzer;
+ */
+  //public ObserverBuzzer observerBuzzer;
 
-  
+
 }
