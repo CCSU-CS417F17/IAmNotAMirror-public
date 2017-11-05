@@ -30,6 +30,8 @@ class SubjectSensorTest {
 
         LEDObserverWarner ledWarner2 = new LEDObserverWarner(dhtSensor, -5, 2);
         dhtSensor.addObserver(ledWarner2);
+        
+        dhtSensor.removeObserver(ledWarner2);
 
     
 
