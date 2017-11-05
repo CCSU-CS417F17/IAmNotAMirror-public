@@ -38,4 +38,11 @@ class SubjectSensorTest {
 
     }
 
+    void notifyObservers() {
+
+    }
+
+    public class SubjectSensorImp extends SubjectSensor{
+    }
+
 }
