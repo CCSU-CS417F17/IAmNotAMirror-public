@@ -1,7 +1,8 @@
 package edu.ccsu.cs505.compob;
 
-
 import java.util.*;
+import java.util.TimerTask;
+import com.dexterind.grovepi.sensors.*;
 
 
 public class SubjectDHTSensor extends SubjectSensor {
@@ -11,14 +12,51 @@ public class SubjectDHTSensor extends SubjectSensor {
 	private double interval;
 	private double temperature;
 	private double humidity;
-	private DHTDigitalSensor sensor;
+	private int scale = 0;
+	private DHTDigitalSensor dhtSensor;
+	
+
+	public SubjectDHTSensor() {
+		super();
+		this.dhtSensor = new DHTDigitalSensor(1, 0, this.scale);
+		startTimer();
+	}
+	
+	public SubjectDHTSensor(double interval) {
+		super();
+		this.interval = interval;
+		this.dhtSensor = new DHTDigitalSensor(1, 0, this.scale);
+		startTimer();
+	}
+	
+	public SubjectDHTSensor(int scale, double interval) {
+		super();
+		this.scale = scale;
+		this.interval = interval;
+		this.dhtSensor = new DHTDigitalSensor(1, 0, this.scale);
+		startTimer();
+	}
+	
+	private void startTimer() {
+		Timer timer = new Timer();
+		
+		timer.schedule(new TimerTask() {
+			public void run() {
+				read();
+				notifyObservers();
+			}
+		}, (long) interval);
+	}
+
 	
 	/**
      * Read temperature and humidity from 
      * DHTDigitalSensor's read function
      */
 	private void read() {
-		
+		float data[] = this.dhtSensor.read();
+		this.temperature = data[0];
+		this.humidity = data[1];
 	}
 	
     /**

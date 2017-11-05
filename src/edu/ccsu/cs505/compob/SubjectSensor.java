@@ -24,26 +24,27 @@ public abstract class SubjectSensor {
 	public List <ObserverSensor> observers = new ArrayList<>();
 
 
-
 	/**
 	 * @param o of type ObserverDHTSensor is send as a parameter to add as concrete observer
 	 */
-	public void registerObserver (ObserverSensor o) {
-	
+	public void addObserver (ObserverSensor o) {
+		this.observers.add(o);
 	}
 
 	/**
 	 * @param o of type ObserverDHTSensor is send as a parameter to delete from concrete observer
 	 */
 	public void removeObserver (ObserverSensor o) {
-		
+		this.observers.remove(o);
 	}
    
 	/**
 	 * This method is used to notify all the observers if there temperature goes beyond the limit-set
 	 */
 	public void notifyObservers(){
-		
+		for( ObserverSensor o: this.observers) {
+			o.update();
+		}	
 	}
 
 }
