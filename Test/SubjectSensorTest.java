@@ -15,6 +15,9 @@ class SubjectSensorTest {
         dhtSensor.addObserver(ledWarner1);
         SubjectSensor subjectSensorInstance = new SubjectSensorImp();
         assertEquals(ledWarner1,subjectSensorInstance.observers.get(0));
+
+        LEDObserverWarner ledWarner2 = new LEDObserverWarner(dhtSensor, -5, 2);
+        dhtSensor.addObserver(ledWarner2);
     }
 
     @Test
