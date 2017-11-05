@@ -10,6 +10,9 @@ class SubjectSensorTest {
     @Test
     void testaddObserver() throws IOException, InterruptedException, Exception {
      
+      SubjectDHTSensor dhtSensor = new SubjectDHTSensor(0, 5);
+        LEDObserverWarner ledWarner1 = new LEDObserverWarner(dhtSensor, 30, 2);
+        dhtSensor.addObserver(ledWarner1);
     }
 
     @Test
