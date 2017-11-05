@@ -7,13 +7,40 @@ package edu.ccsu.cs505.compob;
  */
 public class LEDObserverWarner extends TempObserverWarner {
 
-	public int observerState;
+	//used to define warning temperature  
+	private double warnTemp;
+	
+	//used to define warning state, 1 means on warning, 0 means not.
+	private boolean warnState;
+	
 
+	public LEDObserverWarner (SubjectDHTSensor sub, double temp) {
+		super();
+		this.subject = sub;
+		this.warnTemp = temp;
+		this.warnState = false;
+	}
+
+	
 	/**
 	 * @param subjectDHTSensor notifies on a regular interval of time
 	 */
-	public void update(SubjectDHTSensor sub) {
+	@Override
+	public void update() {
+		//If not warning
+				if (!this.warnState) {
+					if (this.subject.getTemperaturee() > this.warnTemp) {
+						warn();
+					}
+				}
+				//if it has been warning.
+				else {
+					if (this.subject.getTemperaturee() <= this.warnTemp) {
+						warnfree();
+					}
+				}
 	}
+	
 	
 	
 	/**
@@ -21,6 +48,28 @@ public class LEDObserverWarner extends TempObserverWarner {
      * 
      */
 	private void warn() {
-		
+		System.out.println("start warning");
 	}
+	
+	/**
+     * Release warning LED, according to temperature from update function.
+     * 
+     */
+	private void warnfree() {
+		System.out.println("no warning");
+	}
+	
+	
+	public void setWarnTemp (double temp) {
+		this.warnTemp = temp;
+	}
+	
+	public double getWarnTemp () {
+		return this.warnTemp;
+	}
+
+	
+
+
+	
 }

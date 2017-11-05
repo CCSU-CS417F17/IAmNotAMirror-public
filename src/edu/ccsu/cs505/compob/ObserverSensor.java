@@ -8,6 +8,5 @@ public interface ObserverSensor {
 	/**
 	 * @param sub notifies on a regular interval of time
 	 */
-	public void update(SubjectSensor sub);
-
+	public void update();
 }
