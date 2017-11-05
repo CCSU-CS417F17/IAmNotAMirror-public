@@ -34,8 +34,7 @@ class SubjectSensorTest {
         dhtSensor.removeObserver(ledWarner2);
 
         assertEquals(null,subjectSensorInstance.observers.get(1));
-
-    
+        assertEquals(ledWarner1,subjectSensorInstance.observers.get(0));
 
     }
 
