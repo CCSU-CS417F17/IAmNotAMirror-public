@@ -14,8 +14,9 @@ import com.dexterind.grovepi.sensors.DHTDigitalSensor;
 
 public class SubjectDHTSensorTest {
 
+	/** Test getTemperature(), getHumidity(), getInterval() **/
 	@Test
-	public void Test() throws IOException, InterruptedException, Exception {
+	public void TestGetter() throws IOException, InterruptedException, Exception {
 		
 		SubjectDHTSensor instance1 = new SubjectDHTSensor();
 
@@ -30,8 +31,9 @@ public class SubjectDHTSensorTest {
 		
 	}
 	
+	/** Test read() **/
 	@Test
-	public void Test1() throws IOException, InterruptedException, Exception {
+	public void ReadTest() throws IOException, InterruptedException, Exception {
 		
 		SubjectDHTSensor instance1 = new SubjectDHTSensor();
 		
