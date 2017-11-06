@@ -30,8 +30,13 @@ public abstract class SubjectSensor {
 	public void addObserver(ObserverSensor o) {
 		this.observers.add(o);
 	}
+	/**
+	 * Remove an observerSensor o from existing observer list.
+	 *
+	 * @param o, type ObserverDHTSensor is send as a parameter to delete from
+	 * list.
+	 */
 
-	
 	public void removeObserver(ObserverSensor o) {
 		this.observers.remove(o);
 	}
