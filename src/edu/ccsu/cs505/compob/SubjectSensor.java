@@ -2,7 +2,15 @@ package edu.ccsu.cs505.compob;
 
 import java.util.*;
 
+/**
+ * This is an abstract subject class in the observer pattern. It has a list
+ * attributes which used to store the observers. An addObserver and an
+ * removeObserver methods used to maintain the observer lists. Subject use
+ * notifyObservers function to notify all the observers in observer list
+ * recursively.
+ *
 
+ */
 public abstract class SubjectSensor {
 
 	public List<ObserverSensor> observers = new ArrayList<>();
