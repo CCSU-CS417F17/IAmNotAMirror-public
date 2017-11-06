@@ -15,6 +15,9 @@ import java.util.*;
  */
 public abstract class SubjectSensor {
 
+	/**
+	 * Represents the list of observers.
+	 */
 	public List<ObserverSensor> observers = new ArrayList<>();
 
 	
