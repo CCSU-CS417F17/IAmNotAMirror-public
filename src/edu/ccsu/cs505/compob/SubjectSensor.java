@@ -2,42 +2,25 @@ package edu.ccsu.cs505.compob;
 
 import java.util.*;
 
-/**
- * @author CS505-Group5
- * This an abstract class and it is Subject class in the observer pattern which will notify the observers if the temperature goes beyond the limit-set
- */
 
 public abstract class SubjectSensor {
 
-	/**
-	 * This attribute notifies the observer classes through the object observerDHTSensor
-	 */
-	public List <ObserverSensor> observers = new ArrayList<>();
+	public List<ObserverSensor> observers = new ArrayList<>();
 
-
-	/**
-	 * @param o of type ObserverDHTSensor is send as a parameter to add as concrete observer
-	 */
-	public void addObserver (ObserverSensor o) {
+	
+	public void addObserver(ObserverSensor o) {
 		this.observers.add(o);
 	}
 
-	/**
-	 * @param o of type ObserverDHTSensor is send as a parameter to delete from concrete observer
-	 */
-	public void removeObserver (ObserverSensor o) {
+	
+	public void removeObserver(ObserverSensor o) {
 		this.observers.remove(o);
 	}
-   
-	/**
-	 * This method is used to notify all the observers if there temperature goes beyond the limit-set
-	 */
-	public void notifyObservers(){
-		for( ObserverSensor o: this.observers) {
+
+	public void notifyObservers() {
+		for (ObserverSensor o : this.observers) {
 			o.update();
-		}	
+		}
 	}
 
 }
-
- 
