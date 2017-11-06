@@ -21,6 +21,9 @@ public class SubjectDHTSensorTest {
 		SubjectDHTSensor subjectDHTSensor = new SubjectDHTSensor(5.5);
 		assertEquals(subjectDHTSensor.getInterval(),5.5, 0 );
 		
+		SubjectDHTSensor subjectDHTSensor1 = new SubjectDHTSensor(0, 5.5);
+		assertEquals(subjectDHTSensor1.getInterval(),5.5, 0 );
+		
 	}
 	
 	
