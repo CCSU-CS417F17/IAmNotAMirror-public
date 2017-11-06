@@ -20,7 +20,13 @@ public abstract class SubjectSensor {
 	 */
 	public List<ObserverSensor> observers = new ArrayList<>();
 
-	
+	/**
+	 * Add an observerSensor o into observer list, as one observer of this
+	 * class.
+	 *
+	 * @param o, type ObserverSensor, sent as a parameter to add as concrete
+	 * observer
+	 */
 	public void addObserver(ObserverSensor o) {
 		this.observers.add(o);
 	}
