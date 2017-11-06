@@ -13,14 +13,12 @@ import java.io.IOException;
  *
  *
  * @author CS505-Group5
-
+ * @version 1.0
+ * @since 1.0
+ */
 public class OBComponentDemo {
 
-    /**
-    *This is how Subject and Observer will be defined.
-    */
-
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException, InterruptedException, Exception {
 
         /**
          * Initialize the subject DHT Sensor by scale(C) and interval(seconds);
