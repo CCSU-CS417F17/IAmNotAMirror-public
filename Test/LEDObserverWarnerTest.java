@@ -28,7 +28,29 @@ public LEDObserverWarnerTest(){
 		
 	}
 	
+	@Test
+	public void testUpdateTempLess() throws IOException, InterruptedException, Exception{
+		double warnTemp=30;
+		double sensorTemp= 20;
+		SubjectDHTSensor instanceSub = new SubjectDHTSensor ();
+		LEDObserverWarner instanceLed = new LEDObserverWarner(instanceSub, warnTemp, 1);
+		instanceLed.update();
+		SensorStatus ExpectedResult = SensorStatus.OFF;
+		SensorStatus result = this.ledWarner.getStatus();
+		assertEquals(ExpectedResult, result);
+	}
 	
+	@Test
+	public void testUpdateTempGreater() throws IOException, InterruptedException, Exception{
+		double warnTemp=30;
+		double sensorTemp= 20;
+		SubjectDHTSensor instanceSub = new SubjectDHTSensor ();
+		LEDObserverWarner instanceLed = new LEDObserverWarner(instanceSub, warnTemp, 1);
+		instanceLed.update();
+		SensorStatus ExpectedResult = SensorStatus.ON;
+		SensorStatus result = this.ledWarner.getStatus();
+		assertEquals(ExpectedResult, result);
+	}
 	
 
 
