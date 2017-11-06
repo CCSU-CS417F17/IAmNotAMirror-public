@@ -5,6 +5,17 @@ import java.util.TimerTask;
 import java.io.IOException;
 import com.dexterind.grovepi.sensors.*;
 
+/**
+ * This is subject class in the observer pattern. This class has an attribute
+ * class DHTDigitalSensor, which is imported from Professor Williams' example in
+ * GrovePi package. The subject read temperature and humidity data from this DHT
+ * sensor. And update to observers by timer.
+ *
+ *
+ * @author CS505-Group5
+ * @version 1.0
+ * @since 1.0
+ */
 
 public class SubjectDHTSensor extends SubjectSensor {
 
@@ -38,13 +49,27 @@ public class SubjectDHTSensor extends SubjectSensor {
      * 3.
      */
     private int pinNum = 3;
-
+    /**
+     * Constructor.
+     *
+     * @throws java.io.IOException
+     * @throws java.lang.InterruptedException
+     *
+     */
     public SubjectDHTSensor() throws IOException, InterruptedException, Exception {
         super();
         this.dhtSensor = new DHTDigitalSensor(this.pinNum, 0, this.scale);
         startTimer();
     }
 
+    /**
+     * Constructor.
+     *
+     * @param interval, interval time, by seconds.
+     * @throws java.io.IOException
+     * @throws java.lang.InterruptedException
+     *
+     */
     public SubjectDHTSensor(double interval) throws IOException, InterruptedException, Exception {
         super();
         this.interval = interval;
