@@ -1,13 +1,19 @@
 package edu.ccsu.cs505.compob;
 
 /**
- * This is an interface
+ * In Observer pattern, this is the interface of observers.
+ * Each concrete observer should realize it. 
+ *
  * @author CS505-Group5
+ * @version 1.0
+ * @since 1.0
  */
 public interface ObserverSensor {
-	/**
-	 * @param sub notifies on a regular interval of time
-	 */
-	public void update();
+
+    /**
+     * This public function could be called by subject, the observer would get 
+     * update information from subject 
+     */
+    public void update();
 }
 
