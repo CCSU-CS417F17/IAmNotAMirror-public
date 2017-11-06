@@ -30,7 +30,6 @@ public class SubjectDHTSensorTest {
 		
 	}
 	
-	@SuppressWarnings("deprecation")
 	@Test
 	public void Test1() throws IOException, InterruptedException, Exception {
 		
