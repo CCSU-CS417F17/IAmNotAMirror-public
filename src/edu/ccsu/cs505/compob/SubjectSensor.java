@@ -41,6 +41,10 @@ public abstract class SubjectSensor {
 		this.observers.remove(o);
 	}
 
+	/**
+	 * Notify all the observers, could be overridden by sub-class. beyond the
+	 * limit-set
+	 */
 	public void notifyObservers() {
 		for (ObserverSensor o : this.observers) {
 			o.update();
