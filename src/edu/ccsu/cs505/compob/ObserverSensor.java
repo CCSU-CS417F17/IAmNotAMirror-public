@@ -16,4 +16,3 @@ public interface ObserverSensor {
      */
     public void update();
 }
-

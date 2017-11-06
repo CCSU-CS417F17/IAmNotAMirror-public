@@ -15,40 +15,40 @@ import java.util.*;
  */
 public abstract class SubjectSensor {
 
-	/**
-	 * Represents the list of observers.
-	 */
-	public List<ObserverSensor> observers = new ArrayList<>();
+    /**
+     * Represents the list of observers.
+     */
+    public List<ObserverSensor> observers = new ArrayList<>();
 
-	/**
-	 * Add an observerSensor o into observer list, as one observer of this
-	 * class.
-	 *
-	 * @param o, type ObserverSensor, sent as a parameter to add as concrete
-	 * observer
-	 */
-	public void addObserver(ObserverSensor o) {
-		this.observers.add(o);
-	}
-	/**
-	 * Remove an observerSensor o from existing observer list.
-	 *
-	 * @param o, type ObserverDHTSensor is send as a parameter to delete from
-	 * list.
-	 */
+    /**
+     * Add an observerSensor o into observer list, as one observer of this
+     * class.
+     *
+     * @param o, type ObserverSensor, sent as a parameter to add as concrete
+     * observer
+     */
+    public void addObserver(ObserverSensor o) {
+        this.observers.add(o);
+    }
 
-	public void removeObserver(ObserverSensor o) {
-		this.observers.remove(o);
-	}
+    /**
+     * Remove an observerSensor o from existing observer list.
+     *
+     * @param o, type ObserverDHTSensor is send as a parameter to delete from
+     * list.
+     */
+    public void removeObserver(ObserverSensor o) {
+        this.observers.remove(o);
+    }
 
-	/**
-	 * Notify all the observers, could be overridden by sub-class. beyond the
-	 * limit-set
-	 */
-	public void notifyObservers() {
-		for (ObserverSensor o : this.observers) {
-			o.update();
-		}
-	}
+    /**
+     * Notify all the observers, could be overridden by sub-class. beyond the
+     * limit-set
+     */
+    public void notifyObservers() {
+        for (ObserverSensor o : this.observers) {
+            o.update();
+        }
+    }
 
 }

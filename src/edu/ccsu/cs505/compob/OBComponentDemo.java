@@ -1,4 +1,4 @@
-package MagicMirror2;
+package edu.ccsu.cs505.compob;
 
 import java.io.IOException;
 
@@ -18,6 +18,13 @@ import java.io.IOException;
  */
 public class OBComponentDemo {
 
+    /**
+     * main function, to run demo
+     *
+     * @param args
+     * @throws IOException
+     * @throws java.lang.InterruptedException
+     */
     public static void main(String[] args) throws IOException, InterruptedException, Exception {
 
         /**
@@ -38,4 +45,3 @@ public class OBComponentDemo {
     }
 
 }
-

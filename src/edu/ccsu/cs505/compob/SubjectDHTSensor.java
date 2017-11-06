@@ -16,7 +16,6 @@ import com.dexterind.grovepi.sensors.*;
  * @version 1.0
  * @since 1.0
  */
-
 public class SubjectDHTSensor extends SubjectSensor {
 
     /**
@@ -49,6 +48,7 @@ public class SubjectDHTSensor extends SubjectSensor {
      * 3.
      */
     private int pinNum = 3;
+
     /**
      * Constructor.
      *
