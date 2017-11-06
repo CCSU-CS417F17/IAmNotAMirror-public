@@ -9,7 +9,9 @@ import java.util.*;
  * notifyObservers function to notify all the observers in observer list
  * recursively.
  *
-
+ * @author CS505-Group5
+ * @version 1.0
+ * @since 1.0
  */
 public abstract class SubjectSensor {
 
