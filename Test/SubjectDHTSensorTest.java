@@ -14,6 +14,16 @@ import com.dexterind.grovepi.sensors.DHTDigitalSensor;
 
 public class SubjectDHTSensorTest {
 
+	/** Test Construction of object **/
+	@Test
+	public void TestConstruction() throws IOException, InterruptedException, Exception {
+		
+		SubjectDHTSensor subjectDHTSensor = new SubjectDHTSensor(5.5);
+		assertEquals(subjectDHTSensor.getInterval(),5.5, 0 );
+		
+	}
+	
+	
 	/** Test getTemperature(), getHumidity(), getInterval() **/
 	@Test
 	public void TestGetter() throws IOException, InterruptedException, Exception {
