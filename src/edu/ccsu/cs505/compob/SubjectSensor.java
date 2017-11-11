@@ -34,7 +34,7 @@ public abstract class SubjectSensor {
     /**
      * Remove an observerSensor o from existing observer list.
      *
-     * @param o, type ObserverDHTSensor is send as a parameter to delete from
+     * @param o, type ObserverDSensor is send as a parameter to delete from
      * list.
      */
     public void removeObserver(ObserverSensor o) {
@@ -42,13 +42,13 @@ public abstract class SubjectSensor {
     }
 
     /**
-     * Notify all the observers, could be overridden by sub-class. beyond the
-     * limit-set
+     * Notify all the observers, could be overridden by sub-class.
      */
-    public void notifyObservers() {
-        for (ObserverSensor o : this.observers) {
-            o.update();
-        }
+    @SuppressWarnings("unchecked")
+    public void notifyObservers()  {
+        this.observers.forEach((ObserverSensor o) -> {
+            o.update(SubjectSensor.this);
+        });
     }
 
 }

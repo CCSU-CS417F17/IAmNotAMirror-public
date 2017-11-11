@@ -7,7 +7,7 @@ import com.dexterind.grovepi.sensors.*;
 
 /**
  * This is subject class in the observer pattern. This class has an attribute
- * class DHTDigitalSensor, which is imported from Professor Williams' example in
+ * class DHTDigitalSensor, which is imported from Professor Williams's example in
  * GrovePi package. The subject read temperature and humidity data from this DHT
  * sensor. And update to observers by timer.
  *
@@ -44,8 +44,8 @@ public class SubjectDHTSensor extends SubjectSensor {
     private final DHTDigitalSensor dhtSensor;
 
     /**
-     * Represents the pin number of DHT sensor on the Grove Pi, default value is
-     * 3.
+     * Represents the pin number of DHT sensor on the Grove Pi, default value is 3.
+     * Means using D3 for DHT sensor by default.
      */
     private int pinNum = 3;
 

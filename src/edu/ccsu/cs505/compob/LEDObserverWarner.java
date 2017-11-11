@@ -1,25 +1,23 @@
 package edu.ccsu.cs505.compob;
 
-
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import com.dexterind.grovepi.sensors.Led;
 
-
 /**
  * This class implements the interface ObserverSensor and it is sub-class of
- * Template class. 
- * This is observer class in the observer pattern. This class has an attribute
- * class Led, which is imported from Professor Williams' example inGrovePi package. 
- * If the observer get updated temperature from subject class, and the temperature
- * is higher than warning temperature, it will turn on the LED light to warn.
+ * Template class. This is observer class in the observer pattern. This class
+ * has an attribute class Led, which is imported from Professor Williams's
+ * example inGrovePi package. If the observer get updated temperature from
+ * subject class, and the temperature is higher than warning temperature, it
+ * will turn on the LED light to warn.
  *
  * @author CS505-Group5
  * @version 1.0
  * @since 1.0
  */
-public class LEDObserverWarner extends TempObserverWarner {
+public class LEDObserverWarner extends TempObserverWarner<SubjectDHTSensor> {
 
     /**
      * Represents the warning temperature
@@ -35,7 +33,6 @@ public class LEDObserverWarner extends TempObserverWarner {
      * Represents LED sensor class from GrovePi.
      */
     private Led ledWarner;
-
 
     /**
      * Constructor.
@@ -67,59 +64,51 @@ public class LEDObserverWarner extends TempObserverWarner {
     }
 
     /**
-     * Get update information from subject.
-     */
-    @Override
-    public void update() {
-        //If not warning
-        if (!this.warnState) {
-            if (this.subject.getTemperature() > this.warnTemp) {
-                warn();
-                this.warnState = true;
-
-            }
-        } //if it has been warning.
-        else {
-            if (this.subject.getTemperature() <= this.warnTemp) {
-                try {
-                    warnfree();
-                    this.warnState = false;
-                } catch (IOException ex) {
-                    Logger.getLogger(LEDObserverWarner.class.getName()).log(Level.SEVERE, null, ex);
-                }
-
-            }
-        }
-    }
-
-    /**
-     * Warn by flashing LED, according to temperature from update function.
+     * Implementation of Hook method
      *
      */
     @Override
-    public void warn() {
-        try {
-           this.ledWarner.turnOn();
-           System.out.println("Warning");
-        System.out.println("start warning"); 
-        } catch (IOException ex) {
-            Logger.getLogger(LEDObserverWarner.class.getName()).log(Level.SEVERE, null, ex);
+    public void hookOb() {
+        //If the temperature over warntemp, and LED is turned on, keep it.
+        if (this.subject.getTemperature() > this.warnTemp && this.warnState) {
+            return;
         }
-        
+        //If the temeprature equal or below the warntemp, and LED is turned off, keep it.
+        if (this.subject.getTemperature() <= this.warnTemp && !this.warnState) {
+            return;
+        }
+        //Otherwise, change the LED status, off -> on, or on ->off
+        warn(this.warnState);
+        this.warnState = !this.warnState;
+
     }
 
     /**
-     * Release warning LED, according to temperature from update function.
+     * Change LED status, if LED is on, turn off, is LED is off, turn on. 
      *
      */
-    private void warnfree() throws IOException {
-        this.ledWarner.turnOff();
-        System.out.println("no warning");
+    private void warn(boolean warningStatus) {
+        if (warningStatus) {
+            try {
+                this.ledWarner.turnOff();
+            } catch (IOException ex) {
+                Logger.getLogger(LEDObserverWarner.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            System.out.println("no warning");
+        } else {
+            try {
+                this.ledWarner.turnOn();
+            } catch (IOException ex) {
+                Logger.getLogger(LEDObserverWarner.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            System.out.println("start warning");
+        }
     }
 
     /**
      * Set WarnTemp.
-     * @param temp     
+     *
+     * @param temp
      */
     public void setWarnTemp(double temp) {
         this.warnTemp = temp;

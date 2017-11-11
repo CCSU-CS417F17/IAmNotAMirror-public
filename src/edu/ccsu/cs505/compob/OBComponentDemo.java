@@ -28,13 +28,16 @@ public class OBComponentDemo {
     public static void main(String[] args) throws IOException, InterruptedException, Exception {
 
         /**
-         * Initialize the subject DHT Sensor by scale(C) and interval(seconds);
+         * Initialize the subject DHT Sensor by scale(C), interval(seconds) and PIN
+         * number on Grove Pi;
+         * In this case, use D3 for DHT sensor.
          */
-        SubjectDHTSensor dhtSensor = new SubjectDHTSensor(0, 5);
+        SubjectDHTSensor dhtSensor = new SubjectDHTSensor(0, 5, 3);
 
         /**
          * Initialize the observer by subject class, warn temperature and PIN
          * number on Grove Pi;
+         * In this case, use D2 for LED sensor.
          */
         LEDObserverWarner ledWarner = new LEDObserverWarner(dhtSensor, 20, 2);
 
