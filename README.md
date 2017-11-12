@@ -1,11 +1,9 @@
-This is the reusable Component Interface, which can be used by any other team/group working with raspberryPi and on Smart Mirror concept.
+This sample code will showcase how raspberryPi can be used with an observer pattern where multiple observer can be added by the user.
 
-The working model is based on Observer Pattern, where Sensor is the Subject class which will have multiple observers like LED, buzzer etc.
+This Component Interface, can be used by any other team/group working with raspberryPi and/or on Smart Mirror.
 
-LEDObserverWarner.java and add this point in the readme file ; point 3: The abstract class SubjectSensor can be used for example Temperature Sensor. This Temperature Sensor Subject can have multiple Observers which can be implemented through ObserverSensor interface.
+The working model of this component is based on Observer Pattern, where Sensor is the Subject class which will have multiple observers like LED, buzzer etc.
 
-These multiple observers can be added through addObserver (ObserverSensor o) method defined in abstract SubjectSensor class. Similarly each of these observer can be removed through removeObserver(ObserverSensor o)method. 
+The abstract class SubjectSensor can be used for example Temperature Sensor. This Temperature Sensor Subject can have multiple Observers which can be implemented through ObserverSensor interface.
 
-The interface is designed in such a way, that the Subject Sensor I.e. Temperature Sensor will update the Observers at regular intervals about the change in temperature. Based on these updates the observers act upon.
-
-
+These multiple observers can be added through addObserver (ObserverSensor o) method defined in abstract SubjectSensor class. Similarly each of these observer can be removed through removeObserver(ObserverSensor o)method.
