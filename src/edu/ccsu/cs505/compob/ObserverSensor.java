@@ -5,16 +5,14 @@ package edu.ccsu.cs505.compob;
  * Each concrete observer should realize it. 
  *
  * @author CS505-Group5
- * @version 1.0
- * @param <T>, extends from SubjectSensor class
- * @since 1.0
+ * @version 0.2
+ * @since 0.1
  */
-public interface ObserverSensor <T extends SubjectSensor>{
+public interface ObserverSensor{
 
     /**
      * This public function could be called by subject, the observer would get 
      * update information from subject 
-     * @param sub, SubjectSensor class
      */
-    public void update(T sub);
+    public void update();
 }

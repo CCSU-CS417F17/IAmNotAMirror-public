@@ -6,11 +6,10 @@ package edu.ccsu.cs505.compob;
  * Each subclass could have their own warn method.
  *
  * @author CS505-Group5
- * @version 1.0
- * @param <SubjectDHTSensor>
- * @since 1.0
+ * @version 0.2
+ * @since 0.1
  */
-public abstract class TempObserverWarner <SubjectDHTSensor extends SubjectSensor> implements ObserverSensor<SubjectDHTSensor>  {
+public abstract class TempObserverWarner extends SubjectSensor implements ObserverSensor {
 
     /**
      * Represents the subject of DHT sensor class.
@@ -20,11 +19,9 @@ public abstract class TempObserverWarner <SubjectDHTSensor extends SubjectSensor
     /**
      * Realized from the observer interface. Represents the concrete template
      * method in Template Pattern. Cannot be overridden by sub-class.
-     * @param sub, SubjectDHTSensor class.
      */
     @Override
-    public final void update(SubjectDHTSensor sub) {
-        this.subject = sub;
+    public final void update() {
         //Call Hook method;
         hookOb();
     }

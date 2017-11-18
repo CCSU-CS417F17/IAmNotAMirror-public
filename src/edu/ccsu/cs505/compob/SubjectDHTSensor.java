@@ -13,8 +13,8 @@ import com.dexterind.grovepi.sensors.*;
  *
  *
  * @author CS505-Group5
- * @version 1.0
- * @since 1.0
+ * @version 0.2
+ * @since 0.1
  */
 public class SubjectDHTSensor extends SubjectSensor {
 
@@ -52,8 +52,8 @@ public class SubjectDHTSensor extends SubjectSensor {
     /**
      * Constructor.
      *
-     * @throws java.io.IOException
-     * @throws java.lang.InterruptedException
+     * @throws java.io.IOException, throws IOException
+     * @throws java.lang.InterruptedException, throws InterruptedException
      *
      */
     public SubjectDHTSensor() throws IOException, InterruptedException, Exception {
@@ -100,8 +100,8 @@ public class SubjectDHTSensor extends SubjectSensor {
      * @param scale, scale of temperature.
      * @param interval, interval time, by seconds.
      * @param pinNum , Pin number.
-     * @throws java.io.IOException
-     * @throws java.lang.InterruptedException
+     * @throws java.io.IOException, throws IOException
+     * @throws java.lang.InterruptedException, throws InterruptedException
      *
      */
     public SubjectDHTSensor(int scale, double interval, int pinNum) throws IOException, InterruptedException, Exception {

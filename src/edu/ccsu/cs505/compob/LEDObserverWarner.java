@@ -14,10 +14,10 @@ import com.dexterind.grovepi.sensors.Led;
  * will turn on the LED light to warn.
  *
  * @author CS505-Group5
- * @version 1.0
- * @since 1.0
+ * @version 0.2
+ * @since 0.1
  */
-public class LEDObserverWarner extends TempObserverWarner<SubjectDHTSensor> {
+public class LEDObserverWarner extends TempObserverWarner {
 
     /**
      * Represents the warning temperature
@@ -108,7 +108,7 @@ public class LEDObserverWarner extends TempObserverWarner<SubjectDHTSensor> {
     /**
      * Set WarnTemp.
      *
-     * @param temp
+     * @param temp, temperature data, double type.
      */
     public void setWarnTemp(double temp) {
         this.warnTemp = temp;

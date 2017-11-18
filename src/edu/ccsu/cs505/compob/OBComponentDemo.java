@@ -13,17 +13,17 @@ import java.io.IOException;
  *
  *
  * @author CS505-Group5
- * @version 1.0
- * @since 1.0
+ * @version 0.2
+ * @since 0.1
  */
 public class OBComponentDemo {
 
     /**
      * main function, to run demo
      *
-     * @param args
-     * @throws IOException
-     * @throws java.lang.InterruptedException
+     * @param args, main function
+     * @throws IOException, throws IOException
+     * @throws java.lang.InterruptedException, throws InterruptedException.
      */
     public static void main(String[] args) throws IOException, InterruptedException, Exception {
 

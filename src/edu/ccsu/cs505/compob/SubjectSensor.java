@@ -10,8 +10,8 @@ import java.util.*;
  * recursively.
  *
  * @author CS505-Group5
- * @version 1.0
- * @since 1.0
+ * @version 0.2
+ * @since 0.1
  */
 public abstract class SubjectSensor {
 
@@ -44,11 +44,8 @@ public abstract class SubjectSensor {
     /**
      * Notify all the observers, could be overridden by sub-class.
      */
-    @SuppressWarnings("unchecked")
     public void notifyObservers()  {
-        this.observers.forEach((ObserverSensor o) -> {
-            o.update(SubjectSensor.this);
-        });
+        this.observers.forEach(ObserverSensor::update);
     }
 
 }
