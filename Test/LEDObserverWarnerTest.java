@@ -1,4 +1,4 @@
-package blackberrypi;
+package edu.ccsu.cs505.compob;
 
 import static org.junit.Assert.*;
 
